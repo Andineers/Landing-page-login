@@ -27,6 +27,7 @@ body {
   border: 3px solid rgba(225, 225, 225, 0.3);
   border-radius: 30px;
   backdrop-filter: blur(20px);
+  overflow: hidden;
 }
 
 .col-1 {
@@ -47,11 +48,52 @@ body {
 
 .form-image-main {
   width: 400px;
+  animation: scale-up 3s ease-in-out alternate infinite;
 }
 .form-image {
   position: absolute;
   left: 0;
   width: 500px;
+}
+
+.coin {
+  animation: scale-down 3s ease-in-out alternate infinite;
+}
+
+.spring {
+  animation: scale-down 3s ease-in-out alternate infinite;
+}
+
+.dots {
+  animation: scale-up 3s ease-in-out alternate infinite;
+}
+
+.rocket {
+  animation: up-down 3s ease-in-out alternate infinite;
+}
+
+.cloud {
+  animation: left-right 3s ease-in-out alternate infinite;
+}
+
+.stars {
+  animation: scale-down 3s ease-in-out alternate infinite;
+}
+
+@keyframes left-right {
+  to {
+    transform: translateX(10px);
+  }
+}
+@keyframes up-down {
+  to {
+    transform: translateY(10px);
+  }
+}
+@keyframes left-right {
+  to {
+    transform: scale(0.95);
+  }
 }
 
 .featured-words {
@@ -70,6 +112,7 @@ body {
   position: relative;
   width: 45%;
   padding: 20px;
+  overflow: hidden;
 }
 
 .btn-box {
@@ -98,9 +141,11 @@ body {
   opacity: 0.85;
 }
 
+/*======Login Form======*/
+
 .login-form {
   position: absolute;
-  left: -50%;
+  left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -110,9 +155,11 @@ body {
   transition: 0.3s;
 }
 
+/*=====Regist Form=====*/
+
 .register-form {
   position: absolute;
-  left: 50%;
+  left: -50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -125,6 +172,8 @@ body {
 .register-form .form-title {
   margin-block: 40px 20px;
 }
+
+
 
 .form-title {
   margin: 40px 0;
@@ -232,3 +281,15 @@ body {
   transform: scale(0.9);
 }
 
+/*======Responsive======*/
+@media (max-width: 768px) {
+  .form-container {
+    width: 400px;
+  }
+  .col-1 {
+    display: none;
+  }
+  .col-2 {
+    width: 100%;
+  }
+}
