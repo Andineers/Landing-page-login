@@ -9,7 +9,7 @@ loginBtn.addEventListener("click", () => {
   loginBtn.style.backgroundColor = "#21264D";
   registerBtn.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
 
-  // Mengatur posisi dan opacity form login dan register
+  // Mengatur posisi dan opacity form login dan registerclea
   loginForm.style.left = "50%";
   registerForm.style.left = "-50%";
   
